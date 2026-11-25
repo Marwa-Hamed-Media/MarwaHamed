@@ -64,7 +64,7 @@ footer{padding:26px 0;text-align:center;color:var(--mu);font-size:14px;border-to
 <p>أنا Marwa Hamed. أصنع الفيديوهات، أدير صفحاتك، أجلب لك العملاء، وأبني مواقع وتطبيقات وأنظمة إدارة لشركتك أو مصنعك.</p>
 <div class="cta"><a class="btn" href="#contact">ابدئي مشروعك</a><a class="btn wa" id="heroWa" target="_blank" rel="noopener">واتساب مباشر</a></div>
 <div class="stats"><div><b>7</b>خدمات متكاملة</div><div><b>14+</b>عمل مميز</div><div><b>3</b>دول نخدمها</div></div>
-</div><img src="img/audience.jpg" alt="تنمية الجمهور والمتابعين"></div></header>
+</div><img src="audience.jpg" alt="تنمية الجمهور والمتابعين"></div></header>
 
 <main id="root"></main>
 
@@ -97,7 +97,7 @@ S=[
 const R=document.getElementById('root'),sv=document.getElementById('sv');
 S.forEach(s=>{
  if(s.id!=='ai')sv.add(new Option(s.h,s.h));
- R.insertAdjacentHTML('beforeend',`<section id="s-${s.id}"${s.n%2?'':' style="background:#0f0d1e"'}><div class="w"><div class="sh"><span class="n">${s.n}</span><h2>${s.h}</h2><p>${s.p}</p></div><div class="grid">${s.i.map(c=>c.ai?`<div class="card ai"><h3>ابدأ رحلتك مع الذكاء الاصطناعي</h3><p>كورسات تأسيس AI للمبتدئين وأصحاب الأعمال.</p><a class="btn" href="#contact" onclick="sv.value='كورسات تأسيس AI'">سجّل اهتمامك</a></div>`:c.img?`<div class="card"><img loading="lazy" src="img/${c.img}.jpg" alt="${c.t}"><div><h3>${c.t}</h3><p>${c.d}</p></div></div>`:`<div class="card${s.land?' land':''}"><video controls preload="none" playsinline poster="posters/${c.v}.jpg" src="videos/${c.v}.mp4"></video><div><h3>${c.t}</h3><p>${c.d}</p></div></div>`).join('')}</div></div></section>`);
+ R.insertAdjacentHTML('beforeend',`<section id="s-${s.id}"${s.n%2?'':' style="background:#0f0d1e"'}><div class="w"><div class="sh"><span class="n">${s.n}</span><h2>${s.h}</h2><p>${s.p}</p></div><div class="grid">${s.i.map(c=>c.ai?`<div class="card ai"><h3>ابدأ رحلتك مع الذكاء الاصطناعي</h3><p>كورسات تأسيس AI للمبتدئين وأصحاب الأعمال.</p><a class="btn" href="#contact" onclick="sv.value='كورسات تأسيس AI'">سجّل اهتمامك</a></div>`:c.img?`<div class="card"><img loading="lazy" src="${c.img}.jpg" alt="${c.t}"><div><h3>${c.t}</h3><p>${c.d}</p></div></div>`:`<div class="card"><video controls preload="none" playsinline poster="${c.v}.jpg" src="${c.v}.mp4"></video><div><h3>${c.t}</h3><p>${c.d}</p></div></div>`).join('')}</div></div></section>`);
 });
 sv.add(new Option('كورسات تأسيس AI','كورسات تأسيس AI'));
 const N={eg:['201203968107','201050073452'],sa:['966550463489'],ae:['']};
